@@ -1,8 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:ui_practice/IntroScreen/IntroScreen.dart';
-import 'package:ui_practice/ProductDetail.dart';
 import 'package:ui_practice/RegisterUser/Mainpage.dart';
 import 'package:ui_practice/myscreen.dart';
 

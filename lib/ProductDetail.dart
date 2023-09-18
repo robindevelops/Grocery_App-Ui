@@ -1,6 +1,4 @@
 // product_detail.dart
-
-import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:ui_practice/products.dart'; // Import the product model
 
