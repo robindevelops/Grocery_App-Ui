@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:ui_practice/RegisterUser/Loginpage.dart';
+import 'package:ui_practice/RegisterUser/Login_page.dart';
 import 'package:ui_practice/RegisterUser/Signuppage.dart';
 
 class SignUpScreens extends StatefulWidget {

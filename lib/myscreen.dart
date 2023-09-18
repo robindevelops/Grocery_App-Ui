@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:ui_practice/ProductDetail.dart';
 import 'package:ui_practice/products.dart';
 
 class Myscreen extends StatefulWidget {
@@ -101,48 +102,60 @@ class _MyscreenState extends State<Myscreen> {
                 itemBuilder: (BuildContext context, int index) {
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                    child: Container(
-                      width: 120, // Width and height to make it square
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.grey.shade300,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5), // Shadow color
-                            spreadRadius: 2, // Spread radius
-                            blurRadius: 9, // Blur radius
-                            offset: Offset(12, 0), // Offset
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                ProductDetail(products[index]),
                           ),
-                        ], // Background color
-                      ),
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 10),
-                            child: Image.asset(
-                              products[index].imagepath,
-                              height: 80,
-                              fit: BoxFit.contain,
-                              // Adjust the fit as needed
+                        );
+                      },
+                      child: Container(
+                        width: 120, // Width and height to make it squ
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.grey.shade300,
+                          boxShadow: [
+                            BoxShadow(
+                              color:
+                                  Colors.grey.withOpacity(0.5), // Shadow color
+                              spreadRadius: 2, // Spread radius
+                              blurRadius: 9, // Blur radius
+                              offset: Offset(12, 0), // Offset
                             ),
-                          ),
-                          Text(
-                            products[index].name,
-                            style: const TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black,
+                          ], // Background color
+                        ),
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 10),
+                              child: Image.asset(
+                                products[index].imagepath,
+                                height: 80,
+                                fit: BoxFit.contain,
+                                // Adjust the fit as needed
+                              ),
                             ),
-                          ),
-                          const SizedBox(height: 5),
-                          Text(
-                            '\$${products[index].price.toString()}',
-                            style: const TextStyle(
-                                fontSize: 14,
+                            Text(
+                              products[index].name,
+                              style: const TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w400,
                                 color: Colors.black,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ],
+                              ),
+                            ),
+                            const SizedBox(height: 5),
+                            Text(
+                              '\$${products[index].price.toString()}',
+                              style: const TextStyle(
+                                  fontSize: 14,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   );

@@ -11,8 +11,8 @@ class Product {
 }
 
 final List<Product> products = [
-  Product(name: "Product 1", imagepath: "lib/images/fruit.png", price: 10.99),
-  Product(name: "Product 2", imagepath: "lib/images/grocery.png", price: 12.99),
+  Product(name: "Bread", imagepath: "lib/images/bread.png", price: 1.00),
+  Product(name: "PaneCake", imagepath: "lib/images/pancake.png", price: 12.99),
   Product(name: "Product 2", imagepath: "lib/images/fruits.png", price: 12.99),
   Product(name: "Product 2", imagepath: "lib/images/fruit.png", price: 12.99),
   Product(name: "Product 2", imagepath: "lib/images/fruits.png", price: 12.99),

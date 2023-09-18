@@ -2,7 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:ui_practice/IntroScreen/IntroScreen.dart';
+import 'package:ui_practice/ProductDetail.dart';
 import 'package:ui_practice/RegisterUser/Mainpage.dart';
+import 'package:ui_practice/myscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
         '/SignUpScreens': (context) => SignUpScreens(),
       },
       debugShowCheckedModeBanner: false,
-      home: IntroScreen(),
+      home: Myscreen(),
     );
   }
 }
